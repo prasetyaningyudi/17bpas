@@ -231,26 +231,49 @@ class Pembimbingan extends CI_Controller {
 			'classes' 		=> 'full-width',
 		);	
 
-		$this->data['list'] = (object) array (
-			'type'  	=> 'table_default',
-			'data'		=> (object) array (
-				'classes'  	=> 'striped bordered hover',
-				'insertable'=> true,
-				'editable'	=> true,
-				'deletable'	=> true,
-				'statusable'=> false,
-				'detailable'=> true,
-				'pdf'		=> false,
-				'xls'		=> true,
-				'title'		=> 'Daftar Pembimbingan',
-				'pagination'=> $limit,
-				'filters'  	=> $fields,
-				'toolbars'	=> null,
-				'header'  	=> $header,
-				'body'  	=> $body,
-				'footer'  	=> null,
-			)
-		);	
+		if($this->session->userdata('ROLE_NAME') == '' or $this->session->userdata('ROLE_NAME') == null){
+			$this->data['list'] = (object) array (
+				'type'  	=> 'table_default',
+				'data'		=> (object) array (
+					'classes'  	=> 'striped bordered hover',
+					'insertable'=> false,
+					'editable'	=> false,
+					'deletable'	=> false,
+					'statusable'=> false,
+					'detailable'=> false,
+					'pdf'		=> false,
+					'xls'		=> true,
+					'title'		=> 'Daftar Pembimbingan',
+					'pagination'=> $limit,
+					'filters'  	=> $fields,
+					'toolbars'	=> null,
+					'header'  	=> $header,
+					'body'  	=> $body,
+					'footer'  	=> null,
+				)
+			);
+		}else{
+			$this->data['list'] = (object) array (
+				'type'  	=> 'table_default',
+				'data'		=> (object) array (
+					'classes'  	=> 'striped bordered hover',
+					'insertable'=> true,
+					'editable'	=> true,
+					'deletable'	=> true,
+					'statusable'=> false,
+					'detailable'=> true,
+					'pdf'		=> false,
+					'xls'		=> true,
+					'title'		=> 'Daftar Pembimbingan',
+					'pagination'=> $limit,
+					'filters'  	=> $fields,
+					'toolbars'	=> null,
+					'header'  	=> $header,
+					'body'  	=> $body,
+					'footer'  	=> null,
+				)
+			);
+		}
 		
 		if((isset($_POST['expected_output']))){
 			if($_POST['expected_output'] == 'pdf'){
@@ -653,6 +676,7 @@ class Pembimbingan extends CI_Controller {
 	}
 	
 	public function detail($id=null){
+		date_default_timezone_set("Asia/Jakarta");
 		if($this->auth->get_permission($this->session->userdata('ROLE_NAME'), __CLASS__ , __FUNCTION__ ) == false){
 			redirect ('authentication/unauthorized');
 		}		
@@ -711,7 +735,11 @@ class Pembimbingan extends CI_Controller {
 					$body[] = array(
 						(object) array( 'classes' => ' bold align-left ', 'value' => 'Update Date' ),
 						(object) array( 'classes' => ' align-left ', 'value' => $value->UPDATE_DATE ),
-					);					
+					);
+					$body[] = array(
+						(object) array( 'classes' => ' bold align-left ', 'value' => 'User' ),
+						(object) array( 'classes' => ' align-left ', 'value' => $value->USERNAME ),
+					);						
 				}
 			}
 	
