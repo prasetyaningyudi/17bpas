@@ -25,15 +25,13 @@
               </div>
               <div>
                 <input class="btn btn-default submit" type="submit" id="login-submit" name="login-submit" value="Log in"/>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
-                </p>
+
 
                 <div class="clearfix"></div>
 				
@@ -64,7 +62,7 @@
 					<?php endif; ?>				  
 				  </h1>
                   <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved.
-				  <br>Utakata 2.0 Created with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> by <a href="https://yudiprasetya.com/" title="yudiprasetya.com" target="_blank">Yudi Prasetya</a>.
+				  <br>Utakata 2.0 Created with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i>.
 				  <br>Template based on Gentelella by <a target="_blank" href="https://colorlib.com">Colorlib</a></p>
                 </div>
               </div>
@@ -113,7 +111,7 @@
 					<?php endif; ?>				  
 				  </h1>
                   <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved.
-				  <br>Utakata 2.0 Created with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> by <a href="https://yudiprasetya.com/" title="yudiprasetya.com" target="_blank">Yudi Prasetya</a>.
+				  <br>Utakata 2.0 Created with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i>.
 				  <br>Template based on Gentelella by <a target="_blank" href="https://colorlib.com">Colorlib</a></p>
                 </div>
               </div>

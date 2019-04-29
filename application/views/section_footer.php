@@ -2,7 +2,7 @@
         <footer>
           <div class="pull-right">
                   <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved. 
-				  Utakata 2.0 Created with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> by <a href="https://yudiprasetya.com/" title="yudiprasetya.com" target="_blank">Yudi Prasetya.</a> 
+				  Utakata 2.0 Created with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> 
 				  Template based on Gentelella by <a target="_blank" href="https://colorlib.com">Colorlib</a></p>
           </div>
           <div class="clearfix"></div>

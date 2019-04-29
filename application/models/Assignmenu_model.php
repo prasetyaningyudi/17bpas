@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Assignmenu_model extends CI_Model {
 	
-	private $_table1 = "menu";
-	private $_table2 = "role";
-	private $_table3 = "role_menu";
+	private $_table1 = "MENU";
+	private $_table2 = "ROLE";
+	private $_table3 = "ROLE_MENU";
 
     public function __construct(){
 		parent::__construct();
@@ -14,7 +14,7 @@ class Assignmenu_model extends CI_Model {
 	public function get($filters=null, $limit=null){
 		$sql = "SELECT A.*, B.MENU_NAME, C.ROLE_NAME FROM " . $this->_table3 ." A LEFT JOIN ". $this->_table1 ." B ";
 		$sql .= " ON A.MENU_ID = B.ID";
-		$sql .= " LEFT JOIN ". $this->_table2 ." c ";		
+		$sql .= " LEFT JOIN ". $this->_table2 ." C ";		
 		$sql .= " ON A.ROLE_ID = C.ID";
 		$sql .= " WHERE 1=1";
 		if(isset($filters) and $filters != null){

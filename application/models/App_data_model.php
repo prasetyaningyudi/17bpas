@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class App_data_model extends CI_Model {
 	
-	private $_table1 = "app_data";
+	private $_table1 = "APP_DATA";
 
     public function __construct(){
 		parent::__construct();

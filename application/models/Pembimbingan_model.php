@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pembimbingan_model extends CI_Model {
 	
-	private $_table1 = "pembimbingan";
-	private $_table2 = "litmas";
-	private $_table3 = "jenis_pembimbingan";
-	private $_table4 = "user";
+	private $_table1 = "PEMBIMBINGAN";
+	private $_table2 = "LITMAS";
+	private $_table3 = "JENIS_PEMBIMBINGAN";
+	private $_table4 = "USER";
 
     public function __construct(){
 		parent::__construct();

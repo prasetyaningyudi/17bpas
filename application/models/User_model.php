@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_model extends CI_Model {
 	
-	private $_table1 = "user";
-	private $_table2 = "role";
-	private $_table3 = "user_info";
+	private $_table1 = "USER";
+	private $_table2 = "ROLE";
+	private $_table3 = "USER_INFO";
 
     public function __construct(){
 		parent::__construct();

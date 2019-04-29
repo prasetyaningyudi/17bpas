@@ -6,7 +6,8 @@ class Authentication extends CI_Controller {
 	
 	public function __construct(){
 		parent::__construct();
-		$this->load->library('session');		
+		$this->load->library('session');
+		$this->load->driver('cache');	
 		$this->load->helper('url');			
 		$this->load->database();
 		$this->load->model('user_model');
@@ -81,7 +82,8 @@ class Authentication extends CI_Controller {
 	
 	public function logout(){	
 		$this->session->sess_destroy();
-		redirect('authentication');
+		$this->cache->clean();
+		redirect('');
 	}
 
 	public function unauthorized(){

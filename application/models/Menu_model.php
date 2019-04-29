@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Menu_model extends CI_Model {
 	
-	private $_table1 = "menu";
-	private $_table2 = "role_menu";
-	private $_table3 = "role";	
+	private $_table1 = "MENU";
+	private $_table2 = "ROLE_MENU";
+	private $_table3 = "ROLE";	
 
     public function __construct(){
 		parent::__construct();

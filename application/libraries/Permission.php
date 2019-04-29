@@ -4,6 +4,8 @@ $roles = array(
 			'' => array (
 				'home' => array ('index', 'lists'),	
 				'pembimbingan' => array ('index', 'lists'),	
+				'pembimbingandewasa' => array ('index', 'lists'),	
+				'pembimbingananak' => array ('index', 'lists'),	
 				'pengajuan' => array ('index', 'lists', 'insert'),					
 			),
 			'administrator' => array (
@@ -16,13 +18,18 @@ $roles = array(
 				'sample' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),		
 				'litmas' => array ('index', 'lists', 'insert', 'update', 'update_status', 'delete', 'detail'),		
 				'pembimbingan' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
-				'pengajuan' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
+				'pembimbingandewasa' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
+				'pembimbingananak' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
+				'pengajuan' => array ('index', 'lists', 'insert', 'delete', 'detail'),			
 			),
 			'operator' => array (
 				'home' => array ('index', 'lists'),
 				'user' => array ('index', 'lists', 'update','detail', 'm_form_user_info', 'insert_user_info', 'm_user_info'),
 				'litmas' => array ('index', 'lists', 'insert', 'update', 'update_status', 'delete', 'detail'),		
-				'pembimbingan' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),				
+				'pembimbingan' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
+				'pembimbingandewasa' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
+				'pembimbingananak' => array ('index', 'lists', 'insert', 'update', 'delete', 'detail'),			
+				'pengajuan' => array ('index', 'lists', 'insert', 'delete', 'detail'),		
 			),				
 		);
 

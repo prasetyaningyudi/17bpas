@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Role_model extends CI_Model {
 	
-	private $_table1 = "role";
+	private $_table1 = "ROLE";
 
     public function __construct(){
 		parent::__construct();

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pengajuan_model extends CI_Model {
 	
-	private $_table1 = "pengajuan_litmas";
+	private $_table1 = "PENGAJUAN_LITMAS";
 
     public function __construct(){
 		parent::__construct();

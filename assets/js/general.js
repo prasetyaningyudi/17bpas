@@ -20,7 +20,7 @@ function openWindow(url){
 		}
 	});
 	$.ajax({
-		type  : 'ajax',
+		type  : 'POST',
 		url   : listurl,
 		async : true,
 		dataType : 'json',
@@ -35,7 +35,7 @@ function openWindow(url){
 function initiation(url){
 	targeturl = url;
 	$.ajax({
-		type  : 'ajax',
+		type  : 'POST',
 		url   : targeturl + '/lists',
 		async : true,
 		dataType : 'json',
@@ -49,7 +49,7 @@ function initiation(url){
 function initiation_target(url){
 	targeturl = url;
 	$.ajax({
-		type  : 'ajax',
+		type  : 'POST',
 		url   : targeturl,
 		async : true,
 		dataType : 'json',
