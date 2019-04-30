@@ -399,10 +399,12 @@ class User extends CI_Controller {
 						'PHOTO_1' => base_url().'public/photos/'.$rename,
 						'USER_ID' => $_POST['user_id'],
 					);
-				if($_POST['recent_photo'] != null or $_POST['recent_photo'] != ''){
-					$recent_photo = explode('/', $_POST['recent_photo']);
-					$recent_photo = end($recent_photo);
-					unlink(FCPATH."public/photos/".$recent_photo);
+				if(isset($_POST['recent_photo'])){
+					if($_POST['recent_photo'] != null or $_POST['recent_photo'] != ''){
+						$recent_photo = explode('/', $_POST['recent_photo']);
+						$recent_photo = end($recent_photo);
+						unlink(FCPATH."public/photos/".$recent_photo);
+					}
 				}
 			}else{
 				$this->data['insert'] = array(
